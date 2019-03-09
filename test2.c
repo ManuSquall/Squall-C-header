@@ -2,6 +2,9 @@
 
 int main()
 {
+    char T[50];
+    strcpy(T,"Squall");
+    printf("\n\n la chaine comporte %d char", tchar_len(T) );
 
 
 

@@ -257,6 +257,31 @@ int **matrice_create(int *nbl, int *nbc)
 
     return M;
 }
+//#########################################################################
+
+//know the lenght of an int table
+//prend en parametre le tableau d'entier
+//return the lenght
+int tint_len(int T[])
+{
+    int i=0;
+    while(T[i])
+        i++;
+    return i;
+}
+
+//##########################################################################
+
+//know the lenght of a string or char table
+//prend en parametre la chaine
+//return the lenght
+int tchar_len(char T[])
+{
+    int i=0;
+    while(T[i])
+        i++;
+    return i;
+}
 
 
-
+//########################################################################################################################################
