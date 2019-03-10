@@ -37,10 +37,14 @@
 //########################################################################################################################################
 
 void create_N_NAMED_files_in_NAMED_DIR(int n, char *fiName, char *foName);//L49
-void create_N_Parts_in_menu(int a);//L97
-int is_first_number(int a);//L124
-int is_perfect_number(int a);//L140
-void matrice_x_line_n_column();//L191
+void create_N_Parts_in_menu(int a);//L97                            display a menu with a part
+int is_first_number(int a);//L124                                   know if an integer is a "first number"
+int is_perfect_number(int a);//L140                                 know if an integer is a "perfect number"
+void matrice_x_line_n_column();//L191                               creer une matrice de N lignes
+int tint_len(int T[]);//L267                                        know the lenght of an int table
+int tchar_len(char T[]);//L281                                      know the lenght of a string or char table
+char * to_upper(char *t);//L294                                     met en majuscule une chaine
+char * to_lower(char *t);//L305                                     met en minuscule une chaine
 
 
 
@@ -236,7 +240,7 @@ void matrice_x_line_n_column()
 
 
 //########################################################################################################################################
-
+/*
 int **matrice_create(int *nbl, int *nbc)
 {
     int **M=(int**)malloc((*nbl)*sizeof(int**));
@@ -257,6 +261,7 @@ int **matrice_create(int *nbl, int *nbc)
 
     return M;
 }
+//*/
 //#########################################################################
 
 //know the lenght of an int table
@@ -285,3 +290,33 @@ int tchar_len(char T[])
 
 
 //########################################################################################################################################
+
+//  met en majuscule une chaine
+// recoit une chaine|pointeur
+// renvoie une chaine|pointeur
+char * to_upper(char *t)
+{
+    for(int i = 0; i < tchar_len(t); i++)
+    {
+        if(t[i]>='a' && t[i]<='z')
+        t[i]=t[i]-32;
+    }
+    return t;   
+}
+
+
+//########################################################################################################################################
+
+//  met en minuscule une chaine
+// recoit une chaine|pointeur
+// renvoie une chaine|pointeur
+
+char * to_lower(char *t)
+{
+    for(int i = 0; i < tchar_len(t); i++)
+    {
+        if(t[i]>='A' && t[i]<='Z')
+        t[i]=t[i]+32;
+    }
+    return t;   
+}

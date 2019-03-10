@@ -3,8 +3,10 @@
 int main()
 {
     char T[50];
-    strcpy(T,"Squall");
-    printf("\n\n la chaine comporte %d char", tchar_len(T) );
+    strcpy(T,"SqUalL");
+    printf("\n\n la chaine comporte est: %s", T );
+    printf("\n\n la chaine en majuscule est %s", to_upper(T) );
+    printf("\n\n la chaine en minuscule est %s", to_lower(T) );
 
 
 
